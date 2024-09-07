@@ -8,5 +8,5 @@ body {
 	min-width: 900px
 }
 
-.layout{max-width:1000px; margin:0 auto; background:#FFF; padding:20px; margin-top:20px; border-radius:10px;}
-.layout .wz p{font-size:18px;}
+.layout{max-width:1000px; margin:0 auto; background:#FFF; padding:20px; margin-top:20px; border-radius:10px; line-height:2;}
+.layout .wz p{font-size:18px; margin-top:0;}
