@@ -9,4 +9,17 @@ body {
 }
 
 .layout{max-width:1000px; margin:0 auto; background:#FFF; padding:20px; margin-top:20px; border-radius:10px; line-height:2;}
-.layout .wz p{font-size:18px; margin-top:0;}
+.layout .wz p{font-size:18px; margin-top:0;transition:all 1s;}
+.layout .link p a{margin-bottom:10px; display:inline-block;}
+.layout .link p span{margin-bottom:10px; display:inline-block;}
+.layout .wz .copy-content{font-size:12px;}
+.layout .wz a.clash{background:#245380 url(../images/cla.png) no-repeat 16px 13px; background-size: 20px; color:#FFF; padding:5px 20px 5px 45px; border-radius:100px; text-decoration:none; transition:all 0.2s;}
+.layout .wz a.clash:hover{background:#29649d url(../images/cla.png) no-repeat 16px 13px; background-size: 20px;}
+.layout .wz a.shadowrocket{background:#248ae5 url(../images/sha.png) no-repeat 14px 12px; background-size: 26px; color:#FFF; padding:5px 20px 5px 45px; border-radius:100px; text-decoration:none; transition:all 0.2s;}
+.layout .wz a.shadowrocket:hover{background:#2392f4 url(../images/sha.png) no-repeat 14px 12px; background-size: 26px;}
+.layout .wz .clash1{background:#e17011 url(../images/cla.png) no-repeat 16px 13px; background-size: 20px; color:#FFF; padding:5px 20px 5px 45px; border-radius:100px; cursor:pointer; transition:all 0.2s;}
+.layout .wz .clash1:hover{background:#fd7e14 url(../images/cla.png) no-repeat 16px 13px; background-size: 20px;}
+.layout .wz .v2ray{background:#0d9d40 url(../images/v2.png) no-repeat 19px 16px; background-size: 18px; color:#FFF; padding:5px 20px 5px 45px; border-radius:100px; cursor:pointer; transition:all 0.2s;}
+.layout .wz .v2ray:hover{background:#11b149 url(../images/v2.png) no-repeat 19px 16px; background-size: 18px;}
+.layout .link .link1{line-height:1; width:1px; height:1px; overflow:hidden; margin:0}
+.layout .link .link1 span{margin-bottom:0px; display:inline-block;}

@@ -1,2 +1,12 @@
 .layout{width:96%; margin:0 auto; background:#FFF; padding:2em; margin-top:0em; border-radius:1em;}
 .layout .wz p{font-size:2em;}
+.layout .link p a{margin-bottom:1em; display:inline-block;}
+.layout .link p span{margin-bottom:1em; display:inline-block;}
+.layout .wz a.clash{background:#245380 url(../images/cla.png) no-repeat 1.1em 0.9em; background-size: 1.2em; padding:0.5em 1.1em 0.5em 2.8em;}
+.layout .wz a.clash:hover{background:#29649d url(../images/cla.png) no-repeat 1.1em 0.9em; background-size: 1.2em;}
+.layout .wz a.shadowrocket{background:#248ae5 url(../images/sha.png) no-repeat 1em 0.9em; background-size: 1.6em; padding:0.5em 1.1em 0.5em 2.8em;}
+.layout .wz a.shadowrocket:hover{background:#2392f4 url(../images/sha.png) no-repeat 1em 0.9em; background-size: 1.6em;}
+.layout .wz .clash1{background:#e17011 url(../images/cla.png) no-repeat 1.1em 0.9em; background-size: 1.2em; padding:0.5em 1.1em 0.5em 2.8em;}
+.layout .wz .clash1:hover{background:#fd7e14 url(../images/cla.png) no-repeat 1.1em 0.9em; background-size: 1.2em;}
+.layout .wz .v2ray{background:#0d9d40 url(../images/v2.png) no-repeat 1.2em 1.1em; background-size: 1.1em; padding:0.5em 1.1em 0.5em 2.8em;}
+.layout .wz .v2ray:hover{background:#11b149 url(../images/v2.png) no-repeat 1.2em 1.1em; background-size: 1.1em;}
