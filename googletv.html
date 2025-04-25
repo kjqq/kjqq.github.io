@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Google TV 网络连接受限解决方法，google tv ntp服务器 未连接到互联网 设置教程，google tv streamer 4k 网络连接失败</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/article_pc.css" rel="stylesheet" type="text/css" />
+<link href="css/article_app.css" rel="stylesheet" type="text/css" media="screen and (max-width:999px)" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-55EBF07KMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-55EBF07KMP');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1722699328777442"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+<header class="header">
+<div class="inner">
+<div class="logo"><strong>天天科技</strong></div>
+<div class="nav">
+<a href="https://www.kejitt.top/">首页</a>
+<a href="ruanjian.html">软件下载</a>
+<a href="https://www.youtube.com/@kjfx8">视频教程</a>
+<a href="https://www.youtube.com/@kjfx8/search?query=%E8%B7%AF%E7%94%B1%E5%99%A8">路由器</a>
+<a href="https://www.youtube.com/@kjfx8/search?query=%E7%94%B5%E8%A7%86">电视相关</a>
+</div>
+</div>
+</header>
+
+<div class="container">
+<div class="left">
+<h1>Google TV 网络连接受限解决方法，google tv ntp服务器 未连接到互联网 设置，google tv streamer 4k 网络连接失败</h1>
+<div class="video">
+<!--<h2>Google TV Streamer (4K) 使用教程：<a href="https://youtu.be/atXvcDphcFU" target="_blank">https://youtu.be/atXvcDphcFU</a></h2>
+<p>Google TV Streamer 4K 2024款 中国大陆使用教程，包括开箱，激活等。</p>-->
+
+<p>
+<strong>步骤：</strong><br>
+1、开启 Google TV 开发者选项<br>
+2、下载adb工具包，    <a href="https://kjfx.lanzoui.com/ieCac019xq8d" target="_blank">下载地址1>></a>，    <a href="https://github.com/aews/share/releases/download/TV/Google.TV.zip" target="_blank">下载地址2>></a><br>
+3、连接电视输入命令<br>
+4、重启 Google TV <br>
+</p>
+
+<p class="copy_layout">
+<span class="copy-text" id="copyButton1">复制</span>
+<span class="copy-content" id="copyText1">
+adb connect 192.168.1.1<br>
+adb shell settings put global ntp_server ntp1.aliyun.com<br>
+adb shell settings put global captive_portal_https_url https://connect.rom.miui.com/generate_204<br>
+adb reboot<br><br>
+
+#恢复原来设置<br>
+adb shell settings delete global captive_portal_https_url
+</span>
+</p>
+
+<p><br>
+<strong>国内ntp服务器 备用地址：</strong><br>
+ntp1.aliyun.com<br>
+ntp2.aliyun.com<br>
+ntp3.aliyun.com<br>
+ntp4.aliyun.com<br>
+ntp5.aliyun.com<br>
+ntp6.aliyun.com<br>
+ntp7.aliyun.com
+</p>
+
+<h2>NTP服务器是什么？NTP服务器作用是什么？</h2>
+<p>NTP 服务器是一种基于NTP 协议的服务器，能够在分布式时间服务器和客户端之间进行时间同步，使网络中的计算机时间都与国际标准时间(UTC) 同步。 它能提供非常精准的时间矫正服务，时间会在NTP 服务器内部根据不同的等级进行传递，利用计算机对其服务器或时钟源进行时间同步化处理。</p>
+
+<p>
+adb shell settings put global captive_portal_https_url<br>
+作用是设置一个网址来测试 Google TV 网络连通性，默认使用的是google网址，在大陆访问不了，所以会显示“未连接到互联网”，需要改成国内能访问的测试网址。
+</p>
+<br>
+<hr />
+
+<h2>Google TV 相关视频</h2>
+<p style="line-height:2">
+⚙️ <a href="https://youtu.be/atXvcDphcFU" target="_blank">1、Google TV 开箱评测和激活</a><br>
+✅ <a href="googletv.html" target="_blank">2、Google TV 未连接到互联网解决方法</a><br>
+🛠️ <a href="googletv1.html" target="_blank">3、Google TV 安装Clash和第三方App</a><br>
+🌐 <a href="googletv2.html" target="_blank">4、Google TV 科学上网方法二</a>
+</p>
+
+<h2>奈飞账号：<a href="https://kjfx.github.io/nf/" target="_blank">点击查看>></a></h2>
+
+</div>
+
+</div>
+</div>
+<script type="text/javascript" src="css/copytext.js"></script>
+<footer class="footer">
+<div class="footer_nav">
+Copyright &copy; 2025 天天科技教学
+<a href="https://www.kejitt.top/">首页</a><a href="https://www.youtube.com/@kjfx8" target="_blank">观看更多视频>></a> <a href="#">TOP↑</a></div>
+<div class="tips">*本站部分内容来自网络，如果您是内容或软件的作者，不希望您的内容在本站展示，请联系我们，谢谢！</div>
+</footer>
+
+</body>
+</html>
