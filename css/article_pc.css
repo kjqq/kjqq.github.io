@@ -20,7 +20,7 @@ body {
 .container .left .video{width:90%; margin:0 auto;}
 .container .left iframe{width:100%; min-height:506px; border-radius:10px;}
 .container .left .video img{max-width:100%;}
-.container .left p{font-size:16px; font-weight: inherit; margin:0 0 20px 0; color:#333;}
+.container .left p{font-size:16px; font-weight: inherit; margin:0 0 20px 0; color:#333; line-height:2;}
 .container .left p a{text-decoration:underline; color:#1068ab}
 .container .left p a:hover{color:#007be3;}
 .container .left p strong{}
@@ -34,7 +34,7 @@ body {
 .container li a{color:#1068ab;}
 .container li a:hover{color:#007be3}
 
-.container .left h1{font-size:32px; color:#333; padding:20px 0px; margin:0 auto; width:90%; margin-bottom:30px; line-height:1.2; border-bottom: 1px solid #eee;}
+.container .left h1{font-size:30px; color:#333; padding:20px 0px; margin:0 auto; width:90%; margin-bottom:30px; line-height:1.2; border-bottom: 1px solid #eee; font-weight:bold;}
 .container .left .data{text-align:center; font-size:14px; padding:20px; margin:0 auto; width:96%; border-bottom:1px solid #eee;}
 .container .left .content{padding:20px; margin-top:10px; line-height:2;}
 .container .left .content img{max-width:860px;}
