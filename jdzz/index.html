@@ -214,12 +214,12 @@ function buildLinkFromProxy(p){
     return 'vmess://' + b64utf8(JSON.stringify(vmess));
   }
 
-  // --- vless (incl. reality) ---
+  // --- vless (含 Reality 与普通) ---
   if(type==='vless'){
     const uuid = p.uuid || p.id || '';
     const params = new URLSearchParams();
 
-    // encryption default none
+    // 默认加密
     const encryption = (p.encryption === undefined) ? (p.encryption || 'none') : (p.encryption);
     params.set('encryption', encryption || 'none');
 
@@ -227,32 +227,46 @@ function buildLinkFromProxy(p){
     const realityPresent = securityField === 'reality' || p['reality-opts'] || p.reality;
 
     if(realityPresent){
+      // ✅ VLESS Reality
       params.set('security','reality');
-      // --- 新增 flow 参数 ---
       params.set('flow','xtls-rprx-vision');
       const r = getReality(p);
       if(r.pbk) params.set('pbk', r.pbk);
       if(r.sid) params.set('sid', r.sid);
       if(r.spx) params.set('spx', encodeURIComponent(r.spx));
       if(r.fp) params.set('fp', r.fp);
-      // servername/sni
       const sni = p.sni || p.servername || p.host || p['server-name'] || undefined;
       if(sni) params.set('sni', sni);
     } else {
+      // ✅ 普通 VLESS TLS/WS
       if(p.tls || securityField === 'tls') {
         params.set('security','tls');
         const sni = p.sni || p.servername || undefined;
         if(sni) params.set('sni', sni);
       }
     }
+	
+      // ✅ 新增 skip-cert-verify → allowInsecure 映射
+      if (typeof p['skip-cert-verify'] !== 'undefined') {
+        params.set('allowInsecure', p['skip-cert-verify'] ? '1' : '0');
+      } else {
+        params.set('allowInsecure', '0');
+      }
 
-    if(p.type) params.set('type', p.type);
-    if(p.network) params.set('type', p.network);
-    if(p.path) params.set('path', p.path);
-    if(p.host) params.set('host', p.host);
-    if(p.alpn) params.set('alpn', Array.isArray(p.alpn)?p.alpn.join(','):p.alpn);
-    if(p.headerType) params.set('headerType', p.headerType);
-    if(p.fp && !params.has('fp')) params.set('fp', p.fp);
+    // ✅ 处理 ws-opts.path 与 ws-opts.headers.Host
+    if (p['ws-opts']) {
+      if (p['ws-opts'].path) params.set('path', p['ws-opts'].path);
+      if (p['ws-opts'].headers && p['ws-opts'].headers.Host) params.set('host', p['ws-opts'].headers.Host);
+    }
+
+    // ✅ 若未设置 ws-opts.host，则尝试普通 host 字段
+    if (p.host && !params.has('host')) params.set('host', p.host);
+    if (p.path && !params.has('path')) params.set('path', p.path);
+
+    if (p.network) params.set('type', p.network);
+    if (p.headerType) params.set('headerType', p.headerType);
+    if (p.alpn) params.set('alpn', Array.isArray(p.alpn)?p.alpn.join(','):p.alpn);
+    if (p['client-fingerprint'] || p.fp) params.set('fp', p['client-fingerprint'] || p.fp);
 
     const q = params.toString();
     return `vless://${uuid}@${p.server||''}:${p.port||''}${q?('?'+q):''}${nameHash}`;
@@ -333,6 +347,13 @@ function buildLinkFromProxy(p){
 	if (typeof p['skip-cert-verify'] !== 'undefined') {
 	  params.set('insecure', p['skip-cert-verify'] ? '1' : '0');
 	}
+	
+    // ✅ 新增支持 mport / ports 字段
+    if (p.mport) {
+      params.set('mport', p.mport);
+    } else if (p.ports) {
+      params.set('mport', p.ports);
+    }
   
 	const q = params.toString();
 	return `hysteria2://${encodeURIComponent(pwd)}@${p.server||''}:${p.port||''}${q?('?'+q):''}${nameHash}`;
