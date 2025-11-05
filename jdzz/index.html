@@ -198,19 +198,29 @@ function buildLinkFromProxy(p){
 
   // --- vmess ---
   if(type==='vmess'){
-    const vmess = {
-      v: "2",
-      ps: displayName,
-      add: p.server||'',
-      port: String(p.port||''),
-      id: p.uuid || p.id || '',
-      aid: String(p.alterId || p.aid || p['alterId'] || 0),
-      net: p.network || p.net || 'tcp',
-      type: p.headerType || p.header || 'none',
-      host: (p['ws-opts'] && p['ws-opts'].headers && p['ws-opts'].headers.Host) ? p['ws-opts'].headers.Host : (p.host||''),
-      path: (p['ws-opts'] && p['ws-opts'].path) ? p['ws-opts'].path : (p.path||''),
-      tls: (p.tls || p.security) ? ((String(p.tls || p.security).toLowerCase()==='tls')?'tls':'') : ''
-    };
+	// ✅ 修复 TLS 逻辑
+	let tlsValue = '';
+	if (typeof p.tls === 'boolean') {
+	  if (p.tls === true) tlsValue = 'tls';
+	} else if (typeof p.tls === 'string') {
+	  if (p.tls.toLowerCase() === 'tls' || p.tls.toLowerCase() === 'true') tlsValue = 'tls';
+	} else if (typeof p.security === 'string') {
+	  if (p.security.toLowerCase() === 'tls') tlsValue = 'tls';
+	}
+	  
+	const vmess = {
+	  v: "2",
+	  ps: displayName,
+	  add: p.server||'',
+	  port: String(p.port||''),
+	  id: p.uuid || p.id || '',
+	  aid: String(p.alterId || p.aid || p['alterId'] || 0),
+	  net: p.network || p.net || 'tcp',
+	  type: p.headerType || p.header || 'none',
+	  host: (p['ws-opts'] && p['ws-opts'].headers && p['ws-opts'].headers.Host) ? p['ws-opts'].headers.Host : (p.host||''),
+	  path: (p['ws-opts'] && p['ws-opts'].path) ? p['ws-opts'].path : (p.path||''),
+	  tls: tlsValue
+	};
     return 'vmess://' + b64utf8(JSON.stringify(vmess));
   }
 
