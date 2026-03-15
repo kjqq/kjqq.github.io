@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>安卓子系统安装教程，支持安装google play，APK文件，支持Windows 11 和 Windows 10 系统安装安卓子系统</title>
+<title>VirtualBox 安装Ubuntu 25.10，下载安装教学，virtualbox安装linux系统教程</title>
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/article_pc.css" rel="stylesheet" type="text/css" />
 <link href="css/article_app.css" rel="stylesheet" type="text/css" media="screen and (max-width:999px)" />
@@ -35,24 +35,48 @@
 
 <div class="container">
 <div class="left">
-<h1>安卓子系统安装教程，支持安装google play，APK文件，支持Windows 11 和 Windows 10 系统安装安卓子系统</h1>
+<h1>VirtualBox 安装Ubuntu 25.10，下载安装教学，virtualbox安装linux系统教程</h1>
 <div class="video">
-<p>安卓子系统安装方法，操作简单，支持安装安卓APP，APK文件，也支持安装google play。<br>
-  视频教程：<a href="https://youtu.be/oRmefsK_Ebo" target="_blank">https://youtu.be/oRmefsK_Ebo</a></p>
-<h2>安卓子系统下载：<a href="https://github.com/MustardChef/WSABuilds" target="_blank">点击下载&gt;&gt;</a></h2>
+<h2>一、准备工作</h2>
 <p>
-<a href="https://github.com/MustardChef/WSABuilds/releases/tag/Windows_11_2407.40000.4.0_v2" target="_blank">Windows 11 X64 &gt;&gt;</a> | <a href="https://github.com/MustardChef/WSABuilds/releases/tag/Windows_10_2407.40000.4.0_v2" target="_blank">Windows 10 X64 &gt;&gt;
-</a></p>
-
-<h2>7-Zip解压工具下载：<a href="https://www.7-zip.org/" target="_blank">点击下载&gt;&gt;</a></h2>
-<br>
-<hr style="border:none; border-bottom:1px double #eee;" />
-<h2>安卓子系统截图：</h2>
-<p>
-<img src="images/31-1.png" /><br><br>
-<img src="images/31-2.png" /><br><br>
-<p align="center"><img src="images/31-3.jpg" /></p>
+首先下载 VirtualBox 和 Ubuntu ISO<br>
+1、VirtualBox下载：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">点击下载>></a><br>
+2、下载Linux系统：<a href="https://www.linux.org/pages/download/" target="_blank">点击下载>></a><br>
+安装好 VirtualBox，再安装 VirtualBox Extension Pack，支持USB 2.0 / 3.0，更好的设备支持。
 </p>
+<h2>二、创建 Ubuntu 虚拟机</h2>
+<p>
+<img src="images/38-1.png" /><br><br>
+
+设置虚拟机的名称，添加Ubuntu ISO 文件，设置虚拟机硬件参数
+<img src="images/38-2.png" /><br><br>
+
+开始安装 Ubuntu 系统
+<img src="images/38-3.png" /><br><br>
+
+安装完系统后，点“立即重启”
+<img src="images/38-4.png" /><br><br>
+
+切换软件镜像源，国内阿里云速度比较快
+<img src="images/38-5.jpg" /><br><br>
+
+安装增强功能，可以开启3D加速，使用也更方便<br>
+安装完增强功能后，关闭虚拟机，再打开虚拟机设置，在显示里开启3D加速，将显存改为128MB
+<img src="images/38-6.jpg" /><br>
+</p>
+
+<h2>✅ 总结</h2>
+<p>
+VirtualBox 安装 Ubuntu 只需要：<br>
+
+1️⃣ 下载 VirtualBox<br>
+2️⃣ 下载 Ubuntu ISO<br>
+3️⃣ 创建虚拟机<br>
+4️⃣ 加载 ISO<br>
+5️⃣ 安装系统<br>
+6️⃣ 安装 Guest Additions 增强功能
+</p>
+
 </div>
 
 </div>
