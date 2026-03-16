@@ -6,9 +6,6 @@
 <link href="css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/article_pc.css" rel="stylesheet" type="text/css" />
 <link href="css/article_app.css" rel="stylesheet" type="text/css" media="screen and (max-width:999px)" />
-<style type="text/css">
-p{word-break: break-all;}
-</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-55EBF07KMP"></script>
 <script>
@@ -18,8 +15,6 @@ p{word-break: break-all;}
 
   gtag('config', 'G-55EBF07KMP');
 </script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2036187456149298"
-     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,10 +23,10 @@ p{word-break: break-all;}
 <div class="logo"><strong>天天科技</strong></div>
 <div class="nav">
 <a href="https://www.kejitt.top/">首页</a>
-<a href="router.html">路由器</a>
-<a href="tv01.html">电视相关</a>
-<a href="app.html">软件使用技巧</a>
-<a href="about_us.html" target="_blank">关于我们</a>
+<a href="ruanjian.html">软件下载</a>
+<a href="https://www.youtube.com/@kjfx8">视频教程</a>
+<a href="https://www.youtube.com/@kjfx8/search?query=%E8%B7%AF%E7%94%B1%E5%99%A8">路由器</a>
+<a href="https://www.youtube.com/@kjfx8/search?query=%E7%94%B5%E8%A7%86">电视相关</a>
 </div>
 </div>
 </header>
@@ -42,29 +37,10 @@ p{word-break: break-all;}
 <div class="video">
 
 <p>
-本教程解锁 AX6000 SSH 不需要借助其它软路由，教程有点长，请大家仔细看视程<br>
+本教程解锁 AX6000 SSH 不需要借助其它软路由，教程有点长，请大家仔细看视频教程<br>
+视频教程：<a href="https://youtu.be/cLSEmZ6ufE4" target="_blank">https://youtu.be/cLSEmZ6ufE4</a><br>
 小米路由器AX6000解锁SSH：<a href="https://github.com/kjfx/AX6000/" target="_blank">https://github.com/kjfx/AX6000/</a><br>
-
-<strong>步骤：</strong><br>
-工具下载，<a href="https://github.com/aews/lyq/releases/download/AX6000/AX6000-SSH.zip" target="_blank">点击下载>></a><br>
-第一步，设置 移动热点<br>
-网络名称改成：OpenWrt，密码：12345678 ，频带：2.4GHz<br>
-查看WiFi信道（通常为1），可通过另外的电脑或手机APP连接这个WiFi查看信道。<br><br>
-
-第二步，AX6000刷固件，降级<br>
-第三步，安装VMware虚拟机，并安装OpenWrt<br>
-OpenWrt 地址：192.168.5.1 用户名：root 密码：password<br><br>
-
-第四步，用WinSCP上传“xqsystem.lua”到OpenWrt的目录：/usr/lib/lua/luci/controller/admin/<br>
-第五步，将OpenWrt LAN口 IPv4 改为：169.254.31.1<br>
-第六步，开启 移动热点 ，并设置热点网络连接，去掉 Internet 协议版本 IPv4<br>
-第七步，编辑虚拟机的桥接网络<br>
-编辑 > 虚拟网络编辑器 > 更改设置<br>
-第八步，登录小米AX6000<br>
-http://192.168.31.1/cgi-bin/luci/;stok=XXXXXX/api/xqsystem/extendwifi_connect_inited_router?ssid=OpenWrt&password=12345678&encryption=WPA2PSKenctype=CCMP&channel=1&band=2g&admin_username=root&admin_password=admin&admin_nonce=xxx<br>
-第九步，通过SN获取默认root账号的密码（SN码在路由器底部或192.168.31.1 能查看到）<br>
-https://miwifi.dev/ssh<br>
-<br><br>
+电报：<a href="https://t.me/kjfxlyq" target="_blank">https://t.me/kjfxlyq</a><br><br>
 
 <img src="images/09-1.jpg" alt=""/>
 </p>
@@ -83,8 +59,8 @@ https://miwifi.dev/ssh<br>
 <footer class="footer">
 <div class="footer_nav">
 Copyright &copy; 2026 天天科技教学
-<a href="https://www.kejitt.top/">首页</a> <a href="about_us.html" target="_blank">关于我们</a> <a href="privacy_policy.html" target="_blank">隐私政策</a> <a href="#">TOP↑</a></div>
-
+<a href="https://www.kejitt.top/">首页</a><a href="https://www.youtube.com/@kjfx8" target="_blank">观看更多视频>></a></div>
+<div class="tips">*本站部分内容来自网络，如果您是内容或软件的作者，不希望您的内容在本站展示，请联系我们，谢谢！</div>
 </footer>
 
 </body>
