@@ -34,7 +34,7 @@ document.getElementById('copyButton3').addEventListener('click', function() {
     selection.addRange(range);
     document.execCommand('copy');
     selection.removeAllRanges();
-    //alert("文本已复制到剪贴板");
+    alert("已复制到剪贴板");
 });
 
 //复制4代码
@@ -47,7 +47,7 @@ document.getElementById('copyButton4').addEventListener('click', function() {
     selection.addRange(range);
     document.execCommand('copy');
     selection.removeAllRanges();
-    //alert("文本已复制到剪贴板");
+    alert("已复制到剪贴板");
 });
 
 //复制5代码
@@ -60,7 +60,7 @@ document.getElementById('copyButton5').addEventListener('click', function() {
     selection.addRange(range);
     document.execCommand('copy');
     selection.removeAllRanges();
-    //alert("文本已复制到剪贴板");
+    alert("已复制到剪贴板");
 });
 
 //复制6代码
